@@ -1,9 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+// import App from './App';
+
+  let curDate=new Date(2021,3,10,19);
+  curDate=curDate.getHours();
+  let greeting=""; 
+
+  if(curDate>=1 && curDate<12){
+    greeting="Good morning";
+
+  }else{
+    if(curDate>=12 && curDate<=19){
+      greeting="good afternoon";
+    }
+    else{
+      greeting="good night";
+    }
+  }
 
 ReactDOM.render(
-    <App />,
+    <>
+      <h1>Hello sir,{greeting}</h1>
+    </>,
   document.getElementById('root')
 );
 
